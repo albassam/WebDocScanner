@@ -1,0 +1,25 @@
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" routerLink=".">ScanCam (Experimental)</a>
+    <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink=".">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/settings">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:info@scancam.xyz">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+f<router-outlet></router-outlet>
+<ngx-spinner></ngx-spinner>

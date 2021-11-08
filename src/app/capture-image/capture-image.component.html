@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center camera">
+        <div [style.display]="!showVideo ? 'block' : 'none'">
+            <canvas id="canvas" #previewCanvas></canvas>
+        </div>
+        <div class="row justify-content-center" [style.display]="showVideo ? 'block' : 'none'">
+            <video id="video" class="video-background" width="100%" height="auto"   autoplay (canplay)="playing($event)" #video>Video stream not
+                available.</video>
+            <div class="row justify-content-center">
+                <img src="assets/camera.png"  (click)="takePicture()">
+            </div>
+        </div>
+    </div>
+</div>

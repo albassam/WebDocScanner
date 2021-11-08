@@ -1,0 +1,21 @@
+
+<div class="container-fluid mt-4">
+    <!--
+    <div class="row d-flex justify-content-center">
+      <div class="col-9">
+        <app-images-pane height="window.innerHeight"></app-images-pane>
+      </div>
+    </div>
+    -->
+    <div *ngIf="isLiveCapture" class="row d-flex justify-content-center">
+      <app-capture-image></app-capture-image>
+    </div>
+    <div *ngIf="!isLiveCapture" class="row d-flex justify-content-center">
+      <app-image-file-selector></app-image-file-selector>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div *ngIf="!isLoaded">
+        Loading...
+      </div>
+    </div>
+  </div>
